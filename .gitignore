@@ -28,6 +28,9 @@ tmp/
 
 # Brunch output folder.
 public/
+app/assets/partials/
+app/assets/*.html
+
 
 # Bower stuff.
 bower_components/
