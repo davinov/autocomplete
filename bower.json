@@ -1,0 +1,14 @@
+{
+    "name": "your-app",
+    "version": "0.0.1",
+    "main": "public/app.js",
+    "dependencies": {
+        "bootstrap": "*",
+        "font-awesome": "*"
+    },
+    "overrides": {
+        "font-awesome": {
+            "main": "./font-awesome.css"
+        }
+    }
+}
