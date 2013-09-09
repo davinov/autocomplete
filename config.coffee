@@ -4,9 +4,9 @@ exports.config =
     wrapper: false
   files:
     javascripts:
-      joinTo: 'app.js'
+      joinTo: 'js/app.js'
     stylesheets:
-      joinTo: 'app.css'
+      joinTo: 'css/app.css'
     templates:
       joinTo:
         'js/templates.js': /.+\.jade$/
