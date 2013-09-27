@@ -1,18 +1,21 @@
-# Brunch app
+Brunch skeleton
+===============
 
-This is HTML5 application, built with [Brunch](http://brunch.io).
+1. AngularJS
+2. Coffeescript
+3. Jade
+4. Less + bootstrap
 
-## Getting started
-* Install [Brunch](http://brunch.io): `npm install -g brunch`.
-* Install Brunch plugins: `npm install`.
-* Install [Bower](http://bower.io) components: `bower install`
-* Watch the project with continuous rebuild by
-`brunch watch --server`. This will also launch HTTP server.
-* Or build the minified project with `brunch build --optimize`.
+Requirements
+------------
 
-Open the `public/` dir to see the result.
+    npm install -g brunch bower
 
-* Write your code in `app` dir.
-* Put static files that should be copied (index.html etc) to `app/assets`.
-* Manage dependencies with [Bower](http://bower.io) or simply put
-  third-party styles & scripts in `vendor` dir.
+Installation
+------------
+
+    git clone https://github.com/vbrajon/brunch-skeleton.git
+    npm install
+    bower install
+    brunch watch --server # Dev
+    brunch build --optimize # Prod

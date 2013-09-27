@@ -20,17 +20,14 @@
 nbproject
 Thumbs.db
 
-# NPM packages folder.
+# NPM + Bower
 node_modules/
+bower_components/
 
-# Brunch folder for temporary files.
+# Brunch
+public/
 tmp/
 
-# Brunch output folder.
-public/
+# File pre-compiled by static jade
 app/assets/partials/
-app/assets/*.html
-
-
-# Bower stuff.
-bower_components/
+app/assets/index.html

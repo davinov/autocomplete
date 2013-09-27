@@ -1,10 +1,12 @@
+# See http://brunch.io/#documentation for docs.
 exports.config =
-  # See http://brunch.io/#documentation for docs.
   modules:
     wrapper: false
   files:
     javascripts:
-      joinTo: 'js/app.js'
+      joinTo:
+        'js/app.js': /^app/
+        'js/vendor.js': /^vendor/
     stylesheets:
       joinTo: 'css/app.css'
     templates:
