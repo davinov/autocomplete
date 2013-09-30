@@ -8,6 +8,7 @@
     "dependencies": {
         "bower": "latest",
         "brunch": "latest",
+        "coveralls": "latest",
         "jade-brunch": ">= 1.0 < 1.8",
         "static-jade-brunch": "*",
         "less-brunch": ">= 1.0 < 1.8",

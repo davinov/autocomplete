@@ -21,6 +21,6 @@ module.exports = (config) ->
     ]
     reporters: ['dots', 'coverage']
     coverageReporter:
-      type: 'text-summary'
-      dir: '../coverage/'
+      type: 'lcov'
+      dir: 'coverage/'
     autoWatch: true
