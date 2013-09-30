@@ -7,6 +7,9 @@
         "font-awesome": "*",
         "angular": "*"
     },
+    "devDependencies": {
+        "angular-mocks": "~1.0.8"
+    },
     "overrides": {
         "font-awesome": {
             "main": "./font-awesome.css"
