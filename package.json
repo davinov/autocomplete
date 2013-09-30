@@ -6,6 +6,8 @@
         "test": "karma start karma.coffee"
     },
     "dependencies": {
+        "bower": "latest",
+        "brunch": "latest",
         "jade-brunch": ">= 1.0 < 1.8",
         "static-jade-brunch": "*",
         "less-brunch": ">= 1.0 < 1.8",
