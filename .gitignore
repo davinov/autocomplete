@@ -31,3 +31,6 @@ tmp/
 # File pre-compiled by static jade
 app/assets/partials/
 app/assets/index.html
+
+# Coveralls
+coverage/

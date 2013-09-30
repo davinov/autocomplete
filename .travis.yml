@@ -8,7 +8,7 @@ before_script:
   - npm install --quiet
   - bower install --quiet
   - brunch build --production && brunch build --production
-  - ./node_modules/coveralls/bin/coveralls.js
+  - cat "$(find coverage -name "*.info")" | ./node_modules/coveralls/bin/coveralls.js
 
 script:
   - karma start karma.coffee --browsers=Firefox --no-auto-watch --single-run
