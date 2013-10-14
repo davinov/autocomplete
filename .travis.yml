@@ -2,10 +2,6 @@ language: node_js
 node_js:
   - "0.10"
 
-before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-
 script:
   - karma start karma.coffee --no-auto-watch --single-run
   - cat "$(find coverage -name "*.info")" | ./node_modules/coveralls/bin/coveralls.js
