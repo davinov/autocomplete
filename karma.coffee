@@ -3,6 +3,7 @@ module.exports = (config) ->
     files: [
       'vendor/**/*.js'
       'bower_components/angular-mocks/angular-mocks.js'
+      'public/js/partials.js'
       'app/**/*.coffee'
       'test/unit/**/*.spec.coffee'
     ]

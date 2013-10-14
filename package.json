@@ -2,6 +2,7 @@
     "name": "your-app",
     "version": "0.0.1",
     "scripts": {
+        "postinstall": "bower install && brunch build --production",
         "start": "brunch watch --server",
         "test": "karma start karma.coffee"
     },
