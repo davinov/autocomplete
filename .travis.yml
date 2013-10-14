@@ -7,5 +7,5 @@ before_script:
   - sh -e /etc/init.d/xvfb start
 
 script:
-  - npm test
+  - karma start karma.coffee --no-auto-watch --single-run
   - cat "$(find coverage -name "*.info")" | ./node_modules/coveralls/bin/coveralls.js
