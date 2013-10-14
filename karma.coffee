@@ -4,20 +4,18 @@ module.exports = (config) ->
       'vendor/**/*.js'
       'bower_components/angular-mocks/angular-mocks.js'
       'app/**/*.coffee'
-      'test/unit/**/*.coffee'
+      'test/unit/**/*.spec.coffee'
     ]
     frameworks: ['jasmine']
-    browsers: ['Chrome']
+    browsers: ['PhantomJS']
     preprocessors:
       '**/*.coffee': ['coffee']
       'app/**/*.coffee': ['coverage']
     plugins: [
-      'karma-junit-reporter'
-      'karma-chrome-launcher'
-      'karma-firefox-launcher'
-      'karma-jasmine'
       'karma-coffee-preprocessor'
       'karma-coverage'
+      'karma-jasmine'
+      'karma-phantomjs-launcher'
     ]
     reporters: ['dots', 'coverage']
     coverageReporter:
