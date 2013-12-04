@@ -8,7 +8,7 @@
         "angular": "*"
     },
     "devDependencies": {
-        "angular-mocks": "~1.0.8"
+        "angular-mocks": "*"
     },
     "overrides": {
         "font-awesome": {

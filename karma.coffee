@@ -11,7 +11,7 @@ module.exports = (config) ->
     browsers: ['PhantomJS']
     preprocessors:
       '**/*.coffee': ['coffee']
-      'app/**/*.coffee': ['coverage']
+#      'app/**/*.coffee': ['coverage']
     plugins: [
       'karma-coffee-preprocessor'
       'karma-coverage'
