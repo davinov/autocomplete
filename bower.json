@@ -5,7 +5,8 @@
     "dependencies": {
         "bootstrap": "*",
         "font-awesome": "*",
-        "angular": "*"
+        "angular": "*",
+        "angular-route": "*"
     },
     "devDependencies": {
         "angular-mocks": "*"

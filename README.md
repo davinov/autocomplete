@@ -16,6 +16,4 @@ Installation
 
     git clone https://github.com/vbrajon/brunch-skeleton.git
     npm install
-    bower install
-    brunch watch --server # Dev
-    brunch build --optimize # Prod
+    npm start # Dev

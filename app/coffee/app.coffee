@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('app', ['ng', 'partials']).config([
+angular.module('app', ['ng', 'ngRoute', 'partials']).config([
   '$routeProvider', '$locationProvider'
   ($routeProvider, $locationProvider) ->
 
