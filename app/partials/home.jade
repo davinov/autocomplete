@@ -1,2 +1,8 @@
-.container
-    h1 {{ 'hey' | capitalize }}
+h1
+    i.icon.icon-fighter-jet
+    span.angular-filter(data-ng-bind="'hey'|capitalize")
+
+.panel.panel-default
+    .panel-heading Jade is a able to import files before compilation and convert markdown !
+    .panel-body
+        include ../../README.md
