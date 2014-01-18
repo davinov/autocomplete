@@ -10,8 +10,8 @@ module.exports = (config) ->
     frameworks: ['jasmine']
     browsers: ['PhantomJS']
     preprocessors:
-      '**/*.coffee': ['coffee']
-#      'app/**/*.coffee': ['coverage']
+      'app/**/*.coffee': ['coffee', 'coverage']
+      'test/**/*.coffee': ['coffee']
     plugins: [
       'karma-coffee-preprocessor'
       'karma-coverage'
