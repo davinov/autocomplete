@@ -1,6 +1,6 @@
 'use strict'
 describe 'filters', ->
-  beforeEach module('app')
+  beforeEach module('skeleton')
 
   describe 'capitalize', ->
     it 'should capitalize a string', inject((capitalizeFilter) ->

@@ -11,20 +11,20 @@ Technologies
 ------------
 
 ### Languages
-- Coffeescript
-- Jade
-- Less
+- [Coffeescript](http://coffeescript.org/)
+- [Jade](http://jade-lang.com/)
+- [Less](http://www.lesscss.org/)
 
 ### Framework|Tools
-- AngularJS
-- AngularUI (Bootstrap)
-- Bootstrap3
-- FontAwesome4
+- [AngularJS](http://angularjs.org/)
+- [AngularUI (Bootstrap)](http://angular-ui.github.io/bootstrap/)
+- [Bootstrap3](http://getbootstrap.com/)
+- [FontAwesome4](http://fontawesome.io/)
 
 Requirements
 ------------
 
-- NodeJS
+- [NodeJS](http://nodejs.org/)
 
 Installation
 ------------
