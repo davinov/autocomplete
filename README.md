@@ -1,7 +1,7 @@
 Brunch skeleton [![Build Status](https://travis-ci.org/vbrajon/brunch-skeleton.png?branch=master)](https://travis-ci.org/vbrajon/brunch-skeleton) [![Coverage Status](https://coveralls.io/repos/vbrajon/brunch-skeleton/badge.png)](https://coveralls.io/r/vbrajon/brunch-skeleton)
 ===============
 
-Minimalistic Skeleton for Brunch including cool stuff
+:skull: Minimalistic Skeleton for Brunch including cool stuff
 
 ![image](https://github.com/vbrajon/brunch-skeleton/raw/master/app/assets/veggie-skeleton.jpg "Veggie Skeleton")
 
