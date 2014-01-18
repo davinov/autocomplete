@@ -30,6 +30,6 @@ Installation
 ------------
 
     git clone https://github.com/vbrajon/brunch-skeleton.git && cd brunch-skeleton
-    npm install -g brunch bower
+    sudo npm install -g brunch bower
     npm install
-    npm start # Dev
+    npm start
