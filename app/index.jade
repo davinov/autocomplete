@@ -1,19 +1,17 @@
 !!! 5
-html(lang='en', data-ng-app='skeleton')
+html(lang='en', data-ng-app='autocomplete')
     head
-        title Brunch Skeleton
+        title Autocomplete with CouchDB & AngularUI
         link(rel='stylesheet', href='/css/app.css')
         link(rel='icon', type='image/x-icon', href='/favicon.ico')
         meta(charset='utf-8')
     body
         .navbar.navbar-default
             .container
-                a.navbar-brand(href='/') Brunch Skeleton
+                a.navbar-brand(href='/') RELAX : Autocomplete with CouchDB & AngularUI
 
         main.container(data-ng-view)
 
-        :coffeescript
-            window.onload = -> console.log Object.keys(window)
         script(src='/js/vendor.js')
         script(src='/js/partials.js')
         script(src='/js/app.js')

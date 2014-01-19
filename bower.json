@@ -1,5 +1,5 @@
 {
-    "name": "skeleton",
+    "name": "autocomplete",
     "version": "1.0.0",
     "main": "public/app.js",
     "dependencies": {
@@ -7,7 +7,9 @@
         "font-awesome": "*",
         "angular": "*",
         "angular-route": "*",
-        "angular-bootstrap": "*"
+        "angular-bootstrap": "*",
+        "angular-ui-utils": "bower",
+        "jquery": "~2.0.3"
     },
     "devDependencies": {
         "angular-mocks": "*"

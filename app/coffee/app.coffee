@@ -1,13 +1,13 @@
 'use strict'
 
-app = angular.module('skeleton', ['ng', 'ngRoute', 'ui.bootstrap', 'partials'])
+app = angular.module('autocomplete', ['ng', 'ngRoute', 'ui.bootstrap', 'partials'])
 
 app.config([
   '$routeProvider', '$locationProvider', '$httpProvider'
   ($routeProvider, $locationProvider, $httpProvider) ->
 
     $routeProvider
-      .when('/', templateUrl: '/partials/home.html')
+      .when('/', templateUrl: '/partials/slides.html', controller: 'slidesCtrl')
       .when('/404', templateUrl: '/partials/404.html')
       .otherwise(redirectTo: '/404')
 

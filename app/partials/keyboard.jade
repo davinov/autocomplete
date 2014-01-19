@@ -1,0 +1,282 @@
+.keyboard
+    section.main-keys
+        .row
+            #key_accent.key
+                em ~
+                br
+                strong `
+            #key_one.key
+                em !
+                br
+                strong 1
+            #key_two.key
+                em @
+                br
+                strong 2
+            #key_three.key
+                em #
+                br
+                strong 3
+            #key_four.key
+                em $
+                br
+                strong 4
+            #key_five.key
+                em %
+                br
+                strong 5
+            #key_six.key
+                em ^
+                br
+                strong 6
+            #key_seven.key
+                em &
+                br
+                strong 7
+            #key_eight.key
+                em *
+                br
+                strong 8
+            #key_nine.key
+                em (
+                br
+                strong 9
+            #key_zero.key
+                em )
+                br
+                strong 0
+            #key_hyphen.key
+                em _
+                br
+                strong -
+            #key_equals.key
+                em +
+                br
+                strong \=
+            #key_backspace.key.wide_2
+                span.right
+                    strong backspace
+        .row
+            #key_tab.key.wide_2
+                span.left
+                    strong tab
+            #key_q.key.single
+                strong Q
+            #key_w.key.single
+                strong W
+            #key_e.key.single
+                strong E
+            #key_r.key.single
+                strong R
+            #key_t.key.single
+                strong T
+            #key_y.key.single
+                strong Y
+            #key_u.key.single
+                strong U
+            #key_i.key.single
+                strong I
+            #key_o.key.single
+                strong O
+            #key_p.key.single
+                strong P
+            #key_left_bracket.key
+                em {
+                br
+                strong [
+            #key_right_bracket.key
+                em }
+                br
+                strong ]
+            #key_backslash.key
+                em |
+                br
+                strong \
+        .row
+            #key_caps_lock.key.wide_3
+                span.left
+                    strong caps lock
+            #key_a.key.single
+                strong A
+            #key_s.key.single
+                strong S
+            #key_d.key.single
+                strong D
+            #key_f.key.single
+                strong F
+            #key_g.key.single
+                strong G
+            #key_h.key.single
+                strong H
+            #key_j.key.single
+                strong J
+            #key_k.key.single
+                strong K
+            #key_l.key.single
+                strong L
+            #key_semicolon.key
+                em :
+                br
+                strong ;
+            #key_apostrophe.key
+                em "
+                br
+                strong '
+            #key_enter.key.wide_3
+                span.right
+                    strong enter
+        .row
+            #key_left_shift.key.wide_4
+                span.left
+                    strong shift
+            #key_z.key.single
+                strong Z
+            #key_x.key.single
+                strong X
+            #key_c.key.single
+                strong C
+            #key_v.key.single
+                strong V
+            #key_b.key.single
+                strong B
+            #key_n.key.single
+                strong N
+            #key_m.key.single
+                strong M
+            #key_comma.key
+                em <
+                br
+                strong ,
+            #key_period.key
+                em >
+                br
+                strong .
+            #key_forwardslash.key
+                em ?
+                br
+                strong /
+            #key_right_shift.key.wide_4
+                span.right
+                    strong shift
+        .row
+            #key_left_ctrl.key.wide_1
+                span.left
+                    strong ctrl
+            #key_left_alt.key.wide_1
+                span.left
+                    strong alt
+            #key_left_cmd.key.wide_1
+                span.left
+                    strong cmd
+            #key_space.key.wide_5
+            #key_right_cmd.key.wide_1
+                span.right
+                    strong cmd
+            #key_right_alt.key.wide_1
+                span.right
+                    strong alt
+            #key_right_ctrl.key.wide_1
+                span.right
+                    strong ctrl
+    section.special-keys
+        .row
+            #key_print.key
+                span
+                    strong print
+            #key_scroll_lock.key
+                span
+                    strong scroll lock
+            #key_pause_break.key
+                span
+                    strong pause break
+        .row
+            #key_insert.key
+                span
+                    strong insert
+            #key_home.key
+                span
+                    strong home
+            #key_page_up.key
+                span
+                    strong page up
+        .row
+            #key_delete.key
+                span
+                    strong delete
+            #key_end.key
+                span
+                    strong end
+            #key_page_down.key
+                span
+                    strong page down
+        .row
+            .key_filler
+            #key_up.key
+                .triangle.up
+            .key_filler
+        .row
+            #key_left.key
+                .triangle.left
+            #key_down.key(z='')
+                .triangle.down
+            #key_right.key
+                .triangle.right
+    section.numpad-keys
+        .row
+            #key_num_lock.key
+                span
+                    strong num lock
+            #key_divide.key.single
+                strong /
+            #key_multiply.key.single
+                strong *
+            #key_subtract.key.single
+                strong -
+        .row
+            #key_num_7.key
+                strong 7
+                span home
+            #key_num_8.key
+                strong 8
+                br
+                .triangle.up
+            #key_num_9.key
+                strong 9
+                span pgup
+            #key_add.key.tall
+                strong +
+        .row
+            #key_num_4.key
+                strong 4
+                br
+                .triangle.left
+            #key_num_5.key
+                strong 5
+            #key_num_6.key
+                strong 6
+                br
+                .triangle.right
+        .row
+            #key_num_1.key
+                strong 1
+                span end
+            #key_num_2.key
+                strong 2
+                br
+                .triangle.down
+            #key_num_3.key
+                strong 3
+                span pgdn
+            #key_num_enter.key.tall
+                span
+                    strong enter
+        .row
+            #key_num_0.key.wide_6
+                strong 0
+                span.right insert
+            #key_num_decimal.key
+                strong .
+                br
+                | del
+        p.note
+            | Some browsers do not distinguish some or all of the numpad keys.
