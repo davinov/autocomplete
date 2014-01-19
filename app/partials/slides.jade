@@ -1,6 +1,5 @@
-div(data-ng-repeat='slide in slides')
-    div(data-ng-include='slide')
+.page(ng-include='template.url', data-ng-class='template.color')
 
-div.keyboard-container
+.keyboard-container
     div(data-ng-include="'/partials/keyboard.html'")
     div.ibuki.standing

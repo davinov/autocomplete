@@ -2,11 +2,19 @@ app.controller('slidesCtrl', [
   '$scope'
   ($scope) ->
 
-    $scope.slides = []
+    $scope.templateIndex = 0
 
-    for num in [1..2]
-      $scope.slides.push("/partials/#{num}.html")
+    $scope.templates = [
+      { url: "/partials/1.html", name: "Allo", color: "page-1" }
+      { url: "/partials/2.html", name: "zaeez", color: "page-2" }
+    ]
 
-    $scope.keypressCallback = -> console.log arguments
+    $scope.template = $scope.templates[$scope.templateIndex]
 
+    update = ->
+      $scope.template = $scope.templates[$scope.templateIndex]
+      $scope.$apply()
+
+    keypress.combo "right", (-> $scope.templateIndex++;update())
+    keypress.combo "left", (-> $scope.templateIndex--;update())
 ])
