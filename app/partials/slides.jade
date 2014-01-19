@@ -1,5 +1,3 @@
-.page(ng-include='template.url', data-ng-class='template.color')
-
-.keyboard-container
-    div(data-ng-include="'/partials/keyboard.html'")
-    div.ibuki.standing
+accordion(vertical="true")
+    accordion-group(data-ng-repeat="tab in tabs", heading="{{tab.title}}", is-open="{{tab.isOpen}}")
+        div(data-ng-include="tab.template")

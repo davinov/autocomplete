@@ -8,8 +8,7 @@ app.config([
 
     $routeProvider
       .when('/', templateUrl: '/partials/slides.html', controller: 'slidesCtrl')
-      .when('/404', templateUrl: '/partials/404.html')
-      .otherwise(redirectTo: '/404')
+      .otherwise(redirectTo: '/')
 
     # Beautify Urls: remove hashbang #! before routes
     $locationProvider.html5Mode true

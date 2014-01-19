@@ -1,18 +1,35 @@
+@import "//fonts.googleapis.com/css?family=Hammersmith+One:400";
+@font-family-sans-serif:  "Hammersmith One", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-size-base:          30px;
+@font-size-h1:            floor(@font-size-base * 2.6); // ~36px
+@font-size-h2:            floor(@font-size-base * 2.15); // ~30px
+@font-size-h3:            ceil(@font-size-base * 1.7); // ~24px
+@font-size-h4:            ceil(@font-size-base * 1.25); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil(@font-size-base * 0.85); // ~12px
 @fa-css-prefix: icon;
 
-.numpad-keys {
-  display: none;
+.slide {
+  width: 1000px;
+  height: 1000px;
+  display: inline-block;
 }
 
 .keyboard-container {
   position: absolute;
   bottom: 0;
-  left: 30px;
-  width: 1240px;
+  left: 0;
+  padding-left: 30px;
+  width: 100%;
+  min-width: 1270px;
+  background-color: rgba(255, 255, 255, 0.9);
   div {
     display: inline-block!important;
   }
   .keyboard {
-    width: 885px;
+    width: 855px;
+    .numpad-keys {
+      display: none;
+    }
   }
 }
