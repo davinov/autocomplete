@@ -1,28 +1,39 @@
 app.controller('relaxCtrl', [
-  '$scope', 'couchdb', '$http', '$route', 'config'
-  ($scope, couchdb, $http, $route, config) ->
+  '$scope', '$http', '$window', 'config'
+  ($scope, $http, $window, config) ->
 
+    $scope.config = config
     $scope.docs = []
+    $scope.isAwesome = (doc) ->
+      return ':?' unless doc
+      switch doc.awesomeness
+        when 1 then ":@"
+        when 2 then ":'("
+        when 3 then ":/"
+        when 8 then ":)"
+        when 9 then ":D"
+        when 10 then "\\o/"
+        else ":|"
 
-    couchdb.findAll.then(
+    $http.get("#{config.dbURL}/#{config.dbname}/_all_docs", params: include_docs: true).then(
       (res) -> $scope.docs = _.pluck res.data.rows, 'doc'
       (err) -> alert 'Error get Captn'
     )
 
     $scope.create = (object) ->
-      $http.post(config.couchdbURL + config.dbname, object).then(
-        (res) -> $scope.docs.push(object)
+      $http.post("#{config.dbURL}/#{config.dbname}", object).then(
+        (res) -> $window.location.reload()
         (err) -> alert 'Error post Captn'
       )
 
     $scope.remove= (doc, index) ->
-      $http.delete(config.couchdbURL + config.dbname + "/#{doc._id}", params: {rev: doc._rev}).then(
-        (res) -> $scope.docs.splice(index, 1)
+      $http.delete("#{config.dbURL}/#{config.dbname}/#{doc._id}", params: {rev: doc._rev}).then(
+        (res) -> $window.location.reload()
         (err) -> alert 'Error delete Captn'
       )
 
     $scope.getLocation = (val) ->
-      $http.get("//127.0.0.1:5984/formation/_design/hipster/_list/byInput/docs",
+      $http.get(config.dbURL + config.dbname + "/_design/app" + "/_list/" + "",
         params:
           input: val
       ).then (res) ->
