@@ -28,7 +28,6 @@ accordion(close-others='autoclose')
                     rating(value="stuff.awesomeness", max="10", state-on="'icon icon-heart pink'", state-off="'icon icon-heart green'", required)
             button.btn.btn-primary(type='submit', data-ng-disabled='!stuffForm.$valid || !stuff.awesomeness') Yeah, save !
     accordion-group(heading="Formulaire de recherche", is-open="true")
-        input.form-control(type='text', data-ng-model='search', typeahead="techno as techno.techno for techno in getTechno($viewValue) | filter:$viewValue")
-
+        input.form-control(type='text', data-ng-model='search', typeahead="result as result.techno for result in getTechno($viewValue) | filter:$viewValue")
         h4 Search Result
         pre {{search}}

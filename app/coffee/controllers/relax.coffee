@@ -15,29 +15,23 @@ app.controller('relaxCtrl', [
         when 10 then "\\o/"
         else ":|"
 
-    $http.get("#{config.dbURL}/#{config.dbname}/_all_docs", params: include_docs: true).then(
-      (res) -> $scope.docs = _.pluck res.data.rows, 'doc'
-      (err) -> alert 'Error get Captn'
-    )
+    reloadPage = (res) -> $window.location.reload()
+    formatResults = (res) -> _.pluck res.data?.rows, 'doc'
+    formatResultsAndSave = (res) -> $scope.docs = formatResults(res)
+
+    $http.get("#{config.dbURL}/#{config.dbname}/_all_docs", params: include_docs: true).then(formatResultsAndSave)
 
     $scope.create = (object) ->
-      $http.post("#{config.dbURL}/#{config.dbname}", object).then(
-        (res) -> $window.location.reload()
-        (err) -> alert 'Error post Captn'
-      )
+      $http.post("#{config.dbURL}/#{config.dbname}", object).then(reloadPage)
 
     $scope.remove= (doc, index) ->
-      $http.delete("#{config.dbURL}/#{config.dbname}/#{doc._id}", params: {rev: doc._rev}).then(
-        (res) -> $window.location.reload()
-        (err) -> alert 'Error delete Captn'
-      )
+      $http.delete("#{config.dbURL}/#{config.dbname}/#{doc._id}", params: {rev: doc._rev}).then(reloadPage)
 
     $scope.getTechno = (val) ->
       $http.get("#{config.dbURL}/#{config.dbname}/_design/app/_list/matchAndSort/technos",
         params:
           search: val
           include_docs: true
-      ).then (res) ->
-        _.pluck res.data.rows, 'doc'
+      ).then(formatResults)
 
 ])
