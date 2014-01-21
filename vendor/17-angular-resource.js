@@ -1,0 +1,1 @@
+/home/david/dev/autocomplete/bower_components/angular-resource/angular-resource.js

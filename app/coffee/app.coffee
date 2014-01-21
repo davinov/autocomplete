@@ -1,6 +1,6 @@
 'use strict'
 
-app = angular.module('autocomplete', ['ng', 'ngRoute', 'ui.bootstrap', 'partials'])
+app = angular.module('autocomplete', ['ng', 'ngRoute', 'ngResource', 'ui.bootstrap', 'partials'])
 
 app.config([
   '$routeProvider', '$locationProvider', '$httpProvider'

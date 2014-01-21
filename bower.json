@@ -11,7 +11,8 @@
         "angular-route": "*",
         "angular-animate": "*",
         "angular-bootstrap": "*",
-        "angular-ui-utils": "bower"
+        "angular-ui-utils": "bower",
+        "angular-resource": "*"
     },
     "devDependencies": {
         "angular-mocks": "*"
