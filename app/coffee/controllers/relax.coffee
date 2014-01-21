@@ -32,11 +32,12 @@ app.controller('relaxCtrl', [
         (err) -> alert 'Error delete Captn'
       )
 
-    $scope.getLocation = (val) ->
-      $http.get(config.dbURL + config.dbname + "/_design/app" + "/_list/" + "",
+    $scope.getTechno = (val) ->
+      $http.get("#{config.dbURL}/#{config.dbname}/_design/app/_list/matchAndSort/technos",
         params:
-          input: val
+          search: val
+          include_docs: true
       ).then (res) ->
-        _.pluck res.data.rows, 'key'
+        _.pluck res.data.rows, 'doc'
 
 ])

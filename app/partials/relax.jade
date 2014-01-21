@@ -2,10 +2,13 @@ h1.text-center(data-ng-click='autoclose=!autoclose') Relax !
 hr
 
 accordion(close-others='autoclose')
-    accordion-group(heading="config")
+    accordion-group(heading="Config")
         pre {{config|json}}
-    accordion-group(heading="_all_docs?include_docs=true")
-        pre {{docs|json}}
+        pre {{docs[docs.length-1]|json}}
+    accordion-group(heading="Documents")
+        ul.list-group
+            li.list-group-item(data-ng-repeat='doc in docs track by $index', data-ng-if='doc.techno') {{doc.techno}} - {{doc.creator}} - {{isAwesome(doc)}}
+                i.icon.icon-plane.pull-right(data-ng-click='remove(doc, $index)')
     accordion-group(heading="Formulaire de création", is-open="true")
         form.form-horizontal(name='stuffForm', data-ng-submit='create(stuff)')
             .row
@@ -24,10 +27,8 @@ accordion(close-others='autoclose')
                 .col-sm-8
                     rating(value="stuff.awesomeness", max="10", state-on="'icon icon-heart pink'", state-off="'icon icon-heart green'", required)
             button.btn.btn-primary(type='submit', data-ng-disabled='!stuffForm.$valid || !stuff.awesomeness') Yeah, save !
-
     accordion-group(heading="Formulaire de recherche", is-open="true")
-        input.form-control(type='text', data-ng-model='input', typeahead="address for address in getLocation($viewValue) | filter:$viewValue")
+        input.form-control(type='text', data-ng-model='search', typeahead="techno as techno.techno for techno in getTechno($viewValue) | filter:$viewValue")
 
-        ul.list-group
-            li.list-group-item(data-ng-repeat='doc in docs track by $index', data-ng-if='doc.techno') {{doc.techno}} - {{doc.creator}} - {{isAwesome(doc)}}
-                i.icon.icon-plane.pull-right(data-ng-click='remove(doc, $index)')
+        h4 Search Result
+        pre {{search}}
